@@ -1,0 +1,36 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "社交媒体运营专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "授权范围内邀请、私信、帖子、评论及入站关联。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "社交",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "ft-social-outreach",
+      "ft-content-operations"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-social-operator.git",
+    "branch": "main"
+  }
+}
